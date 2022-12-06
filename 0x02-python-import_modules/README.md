@@ -1,6 +1,6 @@
 # Python - :page_with_curl: 0x02-python-import_modules
 ## About ths project:
-- In this project i learnt and practiced;
+In this project i learnt and practiced;
 - Why Python programming is awesome
 - How to import functions from another file
 - How to use imported functions
