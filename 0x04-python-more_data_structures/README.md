@@ -92,6 +92,10 @@ In this project i learnt and practiced:
 - You have to use `map`
 - Your file should be max 3 lines
 
+* [12-roman_to_int.py](./12-roman_to_int.py): Python function that converts a roman numeral to an integer.
+- The function assumes the number will be between 1-3999.
+- If the parameter `roman_string` is not a string or `None`, the function returns `0`.
+
 * [100-weight_average.py](100-weight_average.py) - Write a function that returns the weighted average of all integers tuple `(<score>, <weight>)`
 - Prototype: `def weight_average(my_list=[]):`
 - Returns 0 if the list is empty
