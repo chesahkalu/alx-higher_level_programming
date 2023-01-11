@@ -14,7 +14,7 @@
 - What is deserialization
 - How to convert a Python data structure to a JSON string
 - How to convert a JSON string to a Python data structure
-##Tasks file description:
+## Tasks file description:
 * [0-read_file.py](./0-read_file.py): Python function that prints the contents of a UTF8 text
   file to standard output.
 * [1-write_file.py](./1-write_file.py): Python function that writes a string to a UTF8 text
