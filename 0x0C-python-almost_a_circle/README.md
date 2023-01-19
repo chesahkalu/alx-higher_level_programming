@@ -27,9 +27,10 @@ The following function tools were used in creating all the classes and testing i
 - serialization/deserialization
 ## Task files descriptions
 ### Classes:
-- [models](models) - folder containing all the classes and corresponding subclass
++ [models](models) - folder containing all the classes and corresponding subclass
 - [base.py](models/base.py) - Contains the base class `Base` for all other classe:
-* Private class attribute `__nb_objects = 0`.
+
+*  Private class attribute `__nb_objects = 0`.
 * Public instance attribute `id`.
 * Class constructor `def __init__(self, id=None):`
   * If `id` is `None`, increments `__nb_objects` and assigns its value to the
@@ -75,7 +76,10 @@ instantiated from a CSV file.
   objects to print.
   * The parameter `list_squares` is expected to be a list of `Square` objects
   to print.
-- [rectangle.py](models/rectangle.py) - Contains the class `Rectangle`, a subclass inheritance of `Base`
+
+
+- [rectangle.py](models/rectangle.py) - Contains the class `Rectangle`, a subclass inheritance of `Base`:
+
 * Private instance attributes `__width`, `__height`, `__x`, and `__y`.
   * Each private instance attribute features its own getter/setter.
 * Class constructor `def __init__(self, width, height, x=0, y=0, id=None):`
@@ -106,11 +110,28 @@ of a `Rectangle` with the given attributes.
 * Public method `def to_dictionary(self):` that returns the dictionary
 representation of a `Rectangle` instance.
 
-- [square.py](models/square.py) - Contains the class `Square`, a subclass of `Rectangle`
+- [square.py](models/square.py) - Contains the class `Square`, a subclass inheritance of `Rectangle` with:
 
-### Tests:
-* [tests](tests) - folder containing the test models
-  * [test_models](tests/test_models) - Folder containing test files for the classes
+* class constructor `def __init__(self, size, x=0, y=0, id=None):`
+  * The `width` and `height` of the `Rectangle` superclass are assigned using
+  the value of `size`.
+* Overwrite of `__str__` method to print a `Square` instance in the format
+`[Square] (<id>) <x>/<y>`.
+* Public method `def update(self, *args, **kwargs):` that updates an instance
+of a `Square` with the given attributes.
+  * `*args` must be supplied in the following order:
+    * 1st: `id`
+    * 2nd: `size`
+    * 3rd: `x`
+    * 4th: `y`
+  * `**kwargs` is expected to be a double pointer to a dictoinary of new
+  key/value attributes to update the `Square` with.
+  * `**kwargs` is skipped if `*args` exists.
+* Public method `def to_dictionary(self):` that returns the dictionary
+representation of a `Square`.
+
++ [tests](tests) - folder containing the test models
+  - [test_models](tests/test_models) - Folder containing test files for the classes
     * [test_base.py](tests/test_models/test_base.py) - Contains all tests pertaining to class `Base`
     * [test_rectangle.py](tests/test_models/test_rectangle.py) - Contains all tests pertaining to class `Rectangle`
     * [test_square.py](tests/test_models/test_square.py) - Contains all tests pertaining to class `Square`
