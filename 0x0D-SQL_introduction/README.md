@@ -17,8 +17,6 @@ In this project i learnt and practiced:
 
 ## Task files description:
 
-## Tasks :page_with_curl:
-
   * [0-list_databases.sql](./0-list_databases.sql): MySQL script that lists all databases.
 
   * [1-create_database.sql](./1-create_database.sql): MySQL script that creates the database
