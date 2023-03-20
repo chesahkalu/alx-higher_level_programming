@@ -16,3 +16,18 @@ How to map a Python Class to a MySQL table
   <database name>`.
   * Results are ordered by ascending `states.id`.
 
+* [1-filter_states.py](./1-filter_states.py): Python script that uses MySQLdb
+  to list all states with names starting with `N` in the database `hbtn_0e_0_usa`.
+  * Usage: `./1-filter_states.py <mysql username> <mysql password>
+  <database name>`.
+  * Results are ordered by ascending `states.id`.
+
+
+* [2-my_filter_states.py](./2-my_filter_states.py): Python script that uses
+  MySQLdb to display all values matching a given name in the `states` table of
+  the database `hbtn_0e_0_usa`.
+  * Usage: `./2-my_filter_states.py <mysql username> <mysql password>
+  <database name> <state name searched>`.
+  * Results are ordered by ascending `states.id`.
+  * Uses string formatting to construct the SQL query.
+
