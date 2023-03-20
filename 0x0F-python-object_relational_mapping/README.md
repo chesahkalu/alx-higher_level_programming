@@ -98,3 +98,32 @@ How to map a Python Class to a MySQL table
   * Usage: `./12-model_state_update_id_2.py <mysql username> <mysql password>
   <database name>`.
 
+* [13-model_state_delete_a.py](./13-model_state_delete_a.py): Python script
+  that uses SQLAlchemy to delete all `State` objects with a name containing the
+  letter `a` from the database `hbtn_0e_6_usa`.
+  * Usage: `./13-model_state_delete_a.py <mysql username> <mysql password>
+  <database name>`.
+
+* [model_city.py](./model_city.py): Python module defining a class `City`
+  that inherits from SQLAlchemy `Base` and links to the MySQL table `cities`.
+    * Includes class attribute `state_id` that is a foreign key to
+    `states.id`.
+* [14-model_city_fetch_by_state.py](./14-model_city_fetch_by_state.py):
+  Python script that uses SQLAlchemy to list all `City` objects in the database
+  `hbtn_0e_14_usa`.
+  * Usage: `./14-model_city_fetch_by_state.py <mysql username> <mysql password>
+  <database name>`.
+  * Results are sorted by ascending `cities.id`.
+
+* [relationship_state.py](./relationship_state.py): Python module defining a
+  class `State` that inherits from SQLAlchemy `Base` and links to the MySQL table
+  `states`.
+    * Identical to the `State` class defined in [model_state.py](./model_state.py).
+    * Includes class attribute `classes` that represents a relationship with
+    the class `City`. If the `State` object is deleted, all linked `City` objects
+    are also deleted. `State` objects are backreferenced to `City` objects as
+    `state`.
+* [relationship_city.py](./relationship_city.py): Python module defining a
+  class `City` that inherits from SQLAlchemy `Base` and links to the MySQL table
+  `cities`.
+    * Identical to the `City` class defined in [model_city.py](./model_city.py).
