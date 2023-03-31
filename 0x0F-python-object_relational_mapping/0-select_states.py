@@ -15,4 +15,25 @@ if __name__ == "__main__":
     for row in rows:
         print(row)
     cursor.close()
-    db.close()
+    db.close() 
+    
+    """
+-Import the MySQLdb module to allow the script to interact with the MySQL database.
+
+-Import the argv function from the sys module to allow the script to receive input arguments from the command line.
+
+-Check if the script is being run as the main program (as opposed to being imported as a module).
+
+-Create a connection to the MySQL database using the input arguments for the host, port, username, password, database name, and character set.
+
+-Create a cursor object to allow the script to execute SQL statements and retrieve data from the database.
+
+-Execute a SELECT statement that retrieves all rows from the "states" table and orders them by their "id" in ascending order.
+
+-Use the fetchall() method to retrieve all of the rows returned by the SELECT statement. The fetchall() statement returns a list of tuples, 
+where each tuple represents a row of the result set. Each tuple contains values for each column in the corresponding row of the "states" table.
+
+-Iterate through the rows and print each one to the console.
+
+-Close the cursor and database connection to clean up resources.
+    """
