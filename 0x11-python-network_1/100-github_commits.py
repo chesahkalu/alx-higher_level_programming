@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """list 10 most recent commits of a repository,
 - You must use the GitHub API, 
-- the documentation https://developer.github.com/v3/repos/commits/
-- Print all commits by: `<sha>: <author name>` (one by line)
 Eg: ./100-github_commits.py <repository name> <repository owner>
 """
 import sys
