@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""list 10 commits (from the most recent to oldest) of the repository “rails” by the user “rails”
-You must use the GitHub API, here is the documentation https://developer.github.com/v3/repos/commits/
-Print all commits by: `<sha>: <author name>` (one by line)
+"""list 10 most recent of the repository “rails” by the user “rails”
+- You must use the GitHub API, 
+- here is the documentation https://developer.github.com/v3/repos/commits/
+- Print all commits by: `<sha>: <author name>` (one by line)
 Eg: ./100-github_commits.py <repository name> <repository owner>
 """
 import sys
