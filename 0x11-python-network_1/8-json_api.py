@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Takes in a letter
-- sends a POST request to http://0.0.0.0:5000/search_user
+- sends POST request to http://0.0.0.0:5000/search_user
 with the letter as a parameter.
 Eg: ./8-json_api.py <letter>
 """
