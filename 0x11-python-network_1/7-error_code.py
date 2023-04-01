@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Takes in a URL, sends a request to the URL and displays the body of the response.
-
 Eg: ./7-error_code.py <URL>
 """
 import sys
