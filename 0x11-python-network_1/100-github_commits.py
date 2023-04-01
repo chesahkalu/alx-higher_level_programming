@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""list 10 most recent commits of a repository,
-- You must use the GitHub API, 
+"""list 10 most recent commits of a github repository,
 Eg: ./100-github_commits.py <repository name> <repository owner>
 """
 import sys
