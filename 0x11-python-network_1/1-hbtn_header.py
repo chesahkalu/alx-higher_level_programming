@@ -4,6 +4,7 @@ value of the X-Request-Id variable found in the header of the response.
 
 Eg: ./1-hbtn_header.py <URL>
 """
+
 import sys
 import urllib.request
 
