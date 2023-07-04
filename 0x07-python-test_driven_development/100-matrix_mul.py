@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""
-Contains the matrix_mul function
-"""
+
+'''Contains a get_matrix_size and a matrix_mul function for a TDD project.
+'''
+
 
 def get_matrix_sizes(matrix_1, matrix_2, name_1, name_2):
     '''Computes the size of a matrix and performs some
@@ -20,7 +21,7 @@ def get_matrix_sizes(matrix_1, matrix_2, name_1, name_2):
         lambda txt: '{} must be a list of lists'.format(txt),
         lambda txt: '{} should contain only integers or floats'.format(txt),
         lambda txt: 'each row of {} must be of the same size'.format(txt),
-        lambda l: all(map(lambda n: isinstance(n, (int, float)), l)),
+        lambda inner_list: all(map(lambda n: isinstance(n, (int, float)), inner_list)),
     )
     size0 = [0, 0]
     size1 = [0, 0]
@@ -82,4 +83,3 @@ def matrix_mul(m_a, m_b):
                 row_res.append(sum(list(val)))
             res.append(row_res)
         return res
-    
